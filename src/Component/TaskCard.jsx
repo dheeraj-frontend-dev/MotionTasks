@@ -7,16 +7,19 @@ import dltIcon from '../assets/dltIcon.png'
 
 function TaskCard({idx, task, deleteTask}) {
 
-  let animateRef = React.useRef(null);
+  // let animateRef = React.useRef(null);
 
-  const btnAnimateIn = () => {
-    gsap.to(animateRef.current, {
+  const btnAnimateIn = (e, taskId) => {
+    const element = e.currentTarget.querySelector(".cmpltTxt");
+
+    gsap.to(element, {
       duration: 0.3,
       transform: "translateY(-15px)",
-    })
+    });
 
     setTimeout(() => {
-      deleteTask(animateRef.current)
+      deleteTask(taskId);
+      gsap.set(element, { y: 0 });
     }, 3000);
   }
 
@@ -35,9 +38,9 @@ function TaskCard({idx, task, deleteTask}) {
             <div className="cardTitle text-2xl mt-5 leading-5">{task}</div>
         </div>
         <div className="cardBtnContain w-full h-10 flex justify-between items-center gap-1">
-          <div className="cardBtn-left w-full h-full bg-black relative flex justify-center items-center cursor-pointer rounded-[6px]" onClick={btnAnimateIn}>
+          <div className="cardBtn-left w-full h-full bg-black relative flex justify-center items-center cursor-pointer rounded-[6px]" onClick={(e) => btnAnimateIn(e, task)}>
             <div className="cmpltbtn w-full h-[15px] inline-block text-white flex justify-center items-center overflow-hidden" >
-                <div className="cmpltTxt overflow-hidden font-[dirtyline] text-xs text-center" ref={animateRef}>
+                <div className="cmpltTxt overflow-hidden font-[dirtyline] text-xs text-center">
                     <p className='cmpltTxt-inner'>mark as completed</p>
                     <p className='cmpltTxt-inner'>great job 🎉, auto-remove in 3s</p>
                 </div>
