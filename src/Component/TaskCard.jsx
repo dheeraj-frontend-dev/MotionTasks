@@ -16,7 +16,7 @@ function TaskCard({idx, task, deleteTask}) {
     })
 
     setTimeout(() => {
-      deleteTask(task)
+      deleteTask(animateRef.current)
     }, 3000);
   }
 
