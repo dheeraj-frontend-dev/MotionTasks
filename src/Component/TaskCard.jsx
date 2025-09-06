@@ -40,7 +40,7 @@ function TaskCard({idx, task, deleteTask}) {
         <div className="cardBtnContain w-full h-10 flex justify-between items-center gap-1">
           <div className="cardBtn-left w-full h-full bg-black relative flex justify-center items-center cursor-pointer rounded-[6px]" onClick={(e) => btnAnimateIn(e, task)}>
             <div className="cmpltbtn w-full h-[15px] inline-block text-white flex justify-center items-center overflow-hidden" >
-                <div className="cmpltTxt overflow-hidden font-[dirtyline] text-xs text-center">
+                <div className="cmpltTxt overflow-hidden font-[dirtyline] text-[10px] sm:text-xs text-center">
                     <p className='cmpltTxt-inner'>mark as completed</p>
                     <p className='cmpltTxt-inner'>great job 🎉, auto-remove in 3s</p>
                 </div>
