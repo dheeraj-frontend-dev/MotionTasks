@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+/* *{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} */
+
+@font-face {
+  font-family: dirtyline;
+  src: url(assets/Dirtyline.otf);
+}
+@font-face {
+  font-family: neueBold;
+  src: url(assets/NeueMachina-Bold.ttf);
+}
+@font-face {
+  font-family: neueRegular;
+  src: url(assets/NeueMachina-Regular.ttf);
+}
+@font-face {
+  font-family: neueLight;
+  src: url(assets/NeueMachina-Light.ttf);
+}
+
+:root{
+  --primaryRed: #E63946;
+  --lightGreen: #BFEDA9;
+  --darkGreen: #84C367;
+  --lightRed: #F0B4B4;
+  --creamBg: #faedcd;
+  --appBg: #E68139;
+}
+
+body{
+  font-family: neueRegular;
+}

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="src/assets/PageIcon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MotionTask - Your Task Manager</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Grained-JS Link -->
+    <script src="https://cdn.jsdelivr.net/npm/grained@0.0.2/grained.min.js"></script>
+    <script>
+      var options = {
+        "animate": true,
+        "patternWidth": 100,
+        "patternHeight": 100,
+        "grainOpacity": 0.04,
+        "grainDensity": 1,
+        "grainWidth": 1,
+        "grainHeight": 1
+    }
+    grained("#root", options);
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
